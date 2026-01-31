@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang đầu tiên</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Ảnh đại diện */
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;           /* Bo tròn */
+            border: 5px solid #ff69b4;    /* Viền hồng */
+            margin-top: 20px;
+            box-shadow: 0 0 10px gray;    /* Đổ bóng */
+        }
+
+        /* Nút bấm */
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #ff1493, #ff69b4);
+        }
+
+        /* Danh sách */
+        ol {
+            width: 300px;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        ol li {
+            padding: 10px;
+            border: 3px solid #ff69b4;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        ol li:hover {
+            background: pink;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello GitHub 👋</h1>
+
+    <!-- Ảnh của bạn -->
+    <img src="me.webp" alt="Ảnh của tôi">
+
+    <p>Mình đã tạo được website đầu tiên!</p>
+
+    <!-- Nút bấm -->
+    <button onclick="sayThanks()">Bấm vào đây</button>
+
+    <ol>
+        <li>Học HTML</li>
+        <li>Học CSS</li>
+        <li>Đưa lên GitHub</li>
+    </ol>
+
+    <script>
+        function sayThanks() {
+            alert("Cảm ơn bạn rất nhiều ❤️");
+        }
+    </script>
+
+</body>
+</html>
