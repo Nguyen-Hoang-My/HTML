@@ -20,48 +20,26 @@
             box-shadow: 0 0 10px gray;
         }
 
-        /* Nút bấm */
-        button {
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 25px;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(to right, #ff69b4, #ff1493);
-            color: white;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Chữ cảm ơn (ẩn ban đầu) */
-        #thanks {
+        /* Chữ Click */
+        .click-text {
             margin-top: 20px;
             font-size: 20px;
             color: #ff1493;
-            display: none;
+            cursor: pointer;
             font-weight: bold;
         }
 
-        ol {
-            width: 300px;
-            margin: 30px auto;
-            text-align: left;
-        }
-
-        ol li {
-            padding: 10px;
-            border: 3px solid #ff69b4;
-            margin-bottom: 10px;
-            border-radius: 10px;
-        }
-
-        ol li:hover {
-            background: pink;
-            font-weight: bold;
+        .click-text:hover {
             text-decoration: underline;
+            color: #ff69b4;
+        }
+
+        /* Chữ cảm ơn */
+        #thanks {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #ff1493;
+            display: none;
         }
     </style>
 </head>
@@ -74,23 +52,7 @@
 
     <p>Lụm</p>
 
-    <!-- Nút bấm -->
-    <button onclick="showThanks()">Click me 💖</button>
-
-    <!-- Chữ hiện ra -->
-    <div id="thanks">Cảm ơn bạn rất nhiều ❤️</div>
-
-    <ol>
-        <li>Học HTML</li>
-        <li>Học CSS</li>
-        <li>Đưa lên GitHub</li>
-    </ol>
-
-    <script>
-        function showThanks() {
-            document.getElementById("thanks").style.display = "block";
-        }
-    </script>
-
-</body>
-</html>
+    <!-- Chữ click -->
+    <div class="click-text" onclick="showThanks()">
+        Click me 💖
+    </div>
