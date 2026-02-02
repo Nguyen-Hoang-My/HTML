@@ -11,13 +11,13 @@
             padding: 20px;
         }
 
-        /* Ảnh vuông bo góc */
         img {
             width: 150px;
             height: 150px;
-            border-radius: 15px;   /* bo góc */
+            border-radius: 15px;
             border: 4px solid #ff69b4;
             box-shadow: 0 0 10px gray;
+            cursor: pointer; /* chỉ báo là click được */
         }
 
         #thanks {
@@ -34,16 +34,11 @@
 
     <h1>Hello GitHub 👋</h1>
 
-    <!-- Ảnh + image map -->
-    <img src="me.webp" alt="Ảnh của tôi" usemap="#imgmap">
-
-    <map name="imgmap">
-        <area shape="rect"
-              coords="0,0,150,150"
-              title="click me!"
-              href="javascript:void(0);"
-              onclick="showThanks()">
-    </map>
+    <!-- Ảnh click trực tiếp, KHÔNG map, KHÔNG area -->
+    <img src="me.webp"
+         alt="Ảnh của tôi"
+         title="click me!"
+         onclick="showThanks()">
 
     <div id="thanks">
         Cảm ơn bạn rất nhiều ❤️
