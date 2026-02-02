@@ -11,13 +11,34 @@
             padding: 20px;
         }
 
-        img {
+        /* Khung chứa ảnh */
+        .img-box {
+            position: relative;
             width: 150px;
             height: 150px;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
             border-radius: 15px;
             border: 4px solid #ff69b4;
             box-shadow: 0 0 10px gray;
-            cursor: pointer; /* chỉ báo là click được */
+        }
+
+        /* Chữ click me đè lên ảnh */
+        .click-me {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 105, 180, 0.8);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
         }
 
         #thanks {
@@ -34,11 +55,10 @@
 
     <h1>Hello GitHub 👋</h1>
 
-    <!-- Ảnh click trực tiếp, KHÔNG map, KHÔNG area -->
-    <img src="me.webp"
-         alt="Ảnh của tôi"
-         title="click me!"
-         onclick="showThanks()">
+    <div class="img-box">
+        <img src="me.webp" alt="Ảnh của tôi">
+        <div class="click-me" onclick="showThanks()">click me</div>
+    </div>
 
     <div id="thanks">
         Cảm ơn bạn rất nhiều ❤️
