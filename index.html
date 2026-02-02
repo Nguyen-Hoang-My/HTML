@@ -19,14 +19,7 @@
             box-shadow: 0 0 10px gray;
             display: block;
             margin-bottom: 10px;
-        }
-
-        #thanks {
-            display: none;
-            font-size: 18px;
-            color: #ff1493;
-            margin-top: 10px;
-            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -35,21 +28,15 @@
 
     <h1>Chào mừng đến với thế giới Minecraft</h1>
 
-    <img src="me.webp" alt="Ảnh của tôi">
+    
+    <a href="https://happy.vietnam.vn/happy-vietnam" target="_blank">
+        <img src="me.webp" alt="Ảnh của tôi">
+    </a>
 
     
-    <button onclick="showThanks()">Click me</button>
-
-    
-    <div id="thanks">
-        free fire sống dai thành huyền thoại
-    </div>
-
-    <script>
-        function showThanks() {
-            document.getElementById("thanks").style.display = "block";
-        }
-    </script>
+    <button onclick="alert('free fire sống dai thành huyền thoại')">
+        Click me
+    </button>
 
 </body>
 </html>
