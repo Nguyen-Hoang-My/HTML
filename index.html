@@ -11,33 +11,40 @@
             text-align: center;
         }
 
-        /* Ảnh đại diện */
         img {
             width: 150px;
             height: 150px;
-            border-radius: 50%;           /* Bo tròn */
-            border: 5px solid #ff69b4;    /* Viền hồng */
+            border-radius: 50%;
+            border: 5px solid #ff69b4;
             margin-top: 20px;
-            box-shadow: 0 0 10px gray;    /* Đổ bóng */
+            box-shadow: 0 0 10px gray;
         }
 
         /* Nút bấm */
         button {
-            margin-top: 20px;
             padding: 12px 25px;
             font-size: 16px;
+            border-radius: 25px;
             border: none;
-            border-radius: 20px;
+            cursor: pointer;
             background: linear-gradient(to right, #ff69b4, #ff1493);
             color: white;
-            cursor: pointer;
+            margin-top: 20px;
         }
 
         button:hover {
-            background: linear-gradient(to right, #ff1493, #ff69b4);
+            transform: scale(1.05);
         }
 
-        /* Danh sách */
+        /* Chữ cảm ơn (ẩn ban đầu) */
+        #thanks {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff1493;
+            display: none;
+            font-weight: bold;
+        }
+
         ol {
             width: 300px;
             margin: 30px auto;
@@ -63,13 +70,15 @@
 
     <h1>Hello GitHub 👋</h1>
 
-    <!-- Ảnh của bạn -->
     <img src="me.webp" alt="Ảnh của tôi">
 
     <p>Lụm</p>
 
     <!-- Nút bấm -->
-    <button onclick="sayThanks()">Click vào đây</button>
+    <button onclick="showThanks()">Click me 💖</button>
+
+    <!-- Chữ hiện ra -->
+    <div id="thanks">Cảm ơn bạn rất nhiều ❤️</div>
 
     <ol>
         <li>Học HTML</li>
@@ -78,8 +87,8 @@
     </ol>
 
     <script>
-        function sayThanks() {
-            alert("Cảm ơn bạn rất nhiều ❤️");
+        function showThanks() {
+            document.getElementById("thanks").style.display = "block";
         }
     </script>
 
