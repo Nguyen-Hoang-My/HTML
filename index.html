@@ -1,42 +1,96 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Liên quân mobile thắng bại tại kỹ năng</title>
+<meta charset="UTF-8">
+<title>Layout A B C D</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            padding: 20px;
-        }
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+        padding:20px;
+    }
 
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 15px;
-            border: 4px solid #ff69b4;
-            box-shadow: 0 0 10px gray;
-            display: block;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-    </style>
+    .container{
+        width:600px;
+        margin:auto;
+        display:grid;
+        grid-template-areas:
+            "header header"
+            "left content"
+            "footer footer";
+        grid-template-columns:150px 1fr;
+        grid-template-rows:80px 300px 60px;
+        gap:8px;
+    }
+
+    .box{
+        background:white;
+        border:2px solid #ff69b4;
+        border-radius:10px;
+        padding:10px;
+    }
+
+    .header{ grid-area:header; }
+    .left{ grid-area:left; }
+    .content{ grid-area:content; }
+    .footer{ grid-area:footer; }
+
+    img{
+        max-width:100%;
+        border-radius:8px;
+    }
+
+    a{
+        color:#ff1493;
+        font-weight:bold;
+        text-decoration:none;
+    }
+
+    a:hover{
+        text-decoration:underline;
+    }
+</style>
 </head>
 
 <body>
 
-    <h1>Chào mừng đến với thế giới Minecraft</h1>
+<div class="container">
 
-    
-    <a href="https://happy.vietnam.vn/happy-vietnam" target="_blank">
-        <img src="me.webp" alt="Ảnh của tôi">
-    </a>
+    <!-- A: HEADER -->
+    <div class="box header">
+        <h2>Header (A)</h2>
+        <p>👉 Bạn để tiêu đề ở đây</p>
+    </div>
 
-    
-    <button onclick="alert('free fire sống dai thành huyền thoại')">
-        Click me
-    </button>
+    <!-- B: MENU / LINK -->
+    <div class="box left">
+        <h3>Menu (B)</h3>
+        <p><a href="https://google.com" target="_blank">Link Google</a></p>
+        <p><a href="#">Link khác</a></p>
+    </div>
+
+    <!-- C: CONTENT -->
+    <div class="box content">
+        <h3>Nội dung (C)</h3>
+        <p>Đây là văn bản bạn muốn hiển thị.</p>
+
+        <img src="me.webp" alt="Ảnh demo">
+
+        <p>Bạn có thể thêm:</p>
+        <ul>
+            <li>✔ Văn bản</li>
+            <li>✔ Ảnh</li>
+            <li>✔ Link</li>
+        </ul>
+    </div>
+
+    <!-- D: FOOTER -->
+    <div class="box footer">
+        <p>Footer (D) © 2026</p>r
+    </div>
+
+</div>
 
 </body>
-</html>
+</html>R
