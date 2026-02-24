@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Layout bảng</title>
+<title>Menu đổi ảnh</title>
 
 <style>
     body {
@@ -24,30 +24,39 @@
     }
 
     .header {
-        background: #ffb6c1;
         text-align: center;
         font-size: 22px;
         font-weight: bold;
+        background: #ffb6c1;
     }
 
-    .left {
+    .menu {
         width: 150px;
         background: #eee;
     }
 
+    .menu a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: blue;
+        cursor: pointer;
+    }
+
     .content {
-        height: 250px;
+        text-align: center;
+        height: 300px;
+    }
+
+    .content img {
+        max-width: 300px;
+        margin-top: 20px;
     }
 
     .footer {
         text-align: center;
         background: #ddd;
         font-weight: bold;
-    }
-
-    img {
-        width: 100%;
-        max-width: 200px;
     }
 </style>
 </head>
@@ -56,51 +65,48 @@
 
 <table>
 
-    <!-- A: HEADER -->
+    <!-- HEADER -->
     <tr>
         <th colspan="2" class="header">
-            HEADER (A)
+            WEBSITE DEMO
         </th>
     </tr>
 
-    <!-- B + C -->
+    <!-- MENU + CONTENT -->
     <tr>
-        <!-- B: LEFT MENU -->
-        <td class="left">
-            <b>Menu (B)</b><br><br>
 
-            🔗 <a href="https://google.com" target="_blank">Google</a><br><br>
+        <!-- B: MENU -->
+        <td class="menu">
+            <b>Menu</b>
 
-            🔗 <a href="#">Link khác</a><br><br>
+            <a onclick="showImage('img1.jpg')">Ảnh 1</a>
+            <a onclick="showImage('img2.jpg')">Ảnh 2</a>
+            <a onclick="showImage('img3.jpg')">Ảnh 3</a>
 
-            🖼️ Ảnh mẫu:<br>
-            <img src="me.webp" alt="ảnh">
         </td>
 
         <!-- C: CONTENT -->
         <td class="content">
-            <h3>CONTENT (C)</h3>
-            <p>
-                Đây là vùng nội dung. Bạn có thể bỏ:
-            </p>
-
-            <ul>
-                <li>Văn bản</li>
-                <li>Hình ảnh</li>
-                <li>Link</li>
-                <li>Dữ liệu từ Java sau này</li>
-            </ul>
+            <h3>Nội dung hiển thị</h3>
+            <img id="mainImage" src="" alt="">
         </td>
+
     </tr>
 
-    <!-- D: FOOTER -->
+    <!-- FOOTER -->
     <tr>
         <td colspan="2" class="footer">
-            FOOTER (D)
+            FOOTER
         </td>
     </tr>
 
 </table>
+
+<script>
+function showImage(imageName) {
+    document.getElementById("mainImage").src = imageName;
+}
+</script>
 
 </body>
 </html>
