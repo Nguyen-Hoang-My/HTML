@@ -2,95 +2,105 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Layout A B C D</title>
+<title>Layout bảng</title>
 
 <style>
-    body{
-        font-family: Arial, sans-serif;
-        background:#f5f5f5;
-        padding:20px;
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f5f5;
     }
 
-    .container{
-        width:600px;
-        margin:auto;
-        display:grid;
-        grid-template-areas:
-            "header header"
-            "left content"
-            "footer footer";
-        grid-template-columns:150px 1fr;
-        grid-template-rows:80px 300px 60px;
-        gap:8px;
+    table {
+        width: 700px;
+        border-collapse: collapse;
+        background: white;
     }
 
-    .box{
-        background:white;
-        border:2px solid #ff69b4;
-        border-radius:10px;
-        padding:10px;
+    th, td {
+        border: 2px solid #333;
+        padding: 10px;
+        vertical-align: top;
     }
 
-    .header{ grid-area:header; }
-    .left{ grid-area:left; }
-    .content{ grid-area:content; }
-    .footer{ grid-area:footer; }
-
-    img{
-        max-width:100%;
-        border-radius:8px;
+    .header {
+        background: #ffb6c1;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
     }
 
-    a{
-        color:#ff1493;
-        font-weight:bold;
-        text-decoration:none;
+    .left {
+        width: 150px;
+        background: #eee;
     }
 
-    a:hover{
-        text-decoration:underline;
+    .content {
+        height: 250px;
+    }
+
+    .footer {
+        text-align: center;
+        background: #ddd;
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
     }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<table>
 
     <!-- A: HEADER -->
-    <div class="box header">
-        <h2>Header (A)</h2>
-        <p>👉 Bạn để tiêu đề ở đây</p>
-    </div>
+    <tr>
+        <th colspan="2" class="header">
+            HEADER (A)
+        </th>
+    </tr>
 
-    <!-- B: MENU / LINK -->
-    <div class="box left">
-        <h3>Menu (B)</h3>
-        <p><a href="https://google.com" target="_blank">Link Google</a></p>
-        <p><a href="#">Link khác</a></p>
-    </div>
+    <!-- B + C -->
+    <tr>
+        <!-- B: LEFT MENU -->
+        <td class="left">
+            <b>Menu (B)</b><br><br>
 
-    <!-- C: CONTENT -->
-    <div class="box content">
-        <h3>Nội dung (C)</h3>
-        <p>Đây là văn bản bạn muốn hiển thị.</p>
+            🔗 <a href="https://google.com" target="_blank">Google</a><br><br>
 
-        <img src="me.webp" alt="Ảnh demo">
+            🔗 <a href="#">Link khác</a><br><br>
 
-        <p>Bạn có thể thêm:</p>
-        <ul>
-            <li>✔ Văn bản</li>
-            <li>✔ Ảnh</li>
-            <li>✔ Link</li>
-        </ul>
-    </div>
+            🖼️ Ảnh mẫu:<br>
+            <img src="me.webp" alt="ảnh">
+        </td>
+
+        <!-- C: CONTENT -->
+        <td class="content">
+            <h3>CONTENT (C)</h3>
+            <p>
+                Đây là vùng nội dung. Bạn có thể bỏ:
+            </p>
+
+            <ul>
+                <li>Văn bản</li>
+                <li>Hình ảnh</li>
+                <li>Link</li>
+                <li>Dữ liệu từ Java sau này</li>
+            </ul>
+        </td>
+    </tr>
 
     <!-- D: FOOTER -->
-    <div class="box footer">
-        <p>Footer (D) © 2026</p>r
-    </div>
+    <tr>
+        <td colspan="2" class="footer">
+            FOOTER (D)
+        </td>
+    </tr>
 
-</div>
+</table>
 
 </body>
-</html>R
+</html>
