@@ -13,10 +13,11 @@ body{
 
 /* ===== TABLE KHÓA LƯỚI ===== */
 table{
-    width:1200px;   /* nới rộng */
+    width:1200px;
+    margin:auto;
     border-collapse:collapse;
     background:white;
-    table-layout:fixed; /* 🔥 QUAN TRỌNG */
+    table-layout:fixed; /* 🔥 khóa layout */
 }
 
 /* chia 4 cột bằng nhau */
@@ -30,20 +31,21 @@ th, td{
 
 /* ===== A: HEADER ===== */
 .header{
-    height:140px;
+    height:160px;      /* 🔥 A = D */
     padding:0;
 }
 
 .banner{
     width:100%;
-    height:auto;    /* giữ nguyên tỉ lệ */
-    object-fit:cover; /* 🔥 không méo ảnh */
+    height:160px;      /* 🔥 KHÓA CHIỀU CAO */
+    object-fit:contain;/* 🔥 KHÔNG mất chữ */
     display:block;
+    background:#000;
 }
 
 /* ===== B: MENU ===== */
 .menu{
-    height:360px;
+    height:400px;
     background:#eee;
 }
 
@@ -56,20 +58,20 @@ th, td{
 
 /* ===== C: CONTENT ===== */
 .content{
-    height:360px;
+    height:400px;
     text-align:center;
 }
 
 .content iframe{
     width:100%;
-    height:250px;
+    height:300px;
     border:none;
     margin-top:10px;
 }
 
 /* ===== D: FOOTER ===== */
 .footer{
-    height:140px;
+    height:160px;   /* 🔥 bằng A */
     background:#ddd;
     line-height:1.6;
 }
@@ -85,17 +87,17 @@ th, td{
     <col><col><col><col>
 </colgroup>
 
-<!-- ===== A: HEADER (4x1) ===== -->
+<!-- ===== A: HEADER ===== -->
 <tr>
     <th colspan="4" class="header">
-        <img src="banner.jpg" class="banner">
+        <img src="banner.jpg" class="banner" alt="Banner">
     </th>
 </tr>
 
-<!-- ===== B + C (cao 2 ô) ===== -->
+<!-- ===== B + C ===== -->
 <tr>
     <!-- B: 1 cột -->
-    <td colspan="1" rowspan="2" class="menu">
+    <td rowspan="2" class="menu">
         <b>Menu</b>
         <a href="page1.html" target="content">Trang 1</a>
         <a href="page2.html" target="content">Trang 2</a>
@@ -112,7 +114,7 @@ th, td{
 </tr>
 <tr></tr>
 
-<!-- ===== D: FOOTER (4x1) ===== -->
+<!-- ===== D: FOOTER ===== -->
 <tr>
     <td colspan="4" class="footer">
         <b>Tiểu sử bản thân</b><br>
