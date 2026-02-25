@@ -11,7 +11,6 @@ body{
     padding:20px;
 }
 
-/* ===== TABLE KHÓA LƯỚI ===== */
 table{
     width:1200px;
     margin:auto;
@@ -20,7 +19,6 @@ table{
     table-layout:fixed;
 }
 
-/* chia 4 cột bằng nhau */
 col{ width:25%; }
 
 th, td{
@@ -29,23 +27,19 @@ th, td{
     vertical-align:top;
 }
 
-/* ===== A: HEADER ===== */
+/* ===== HEADER ===== */
 .header{
-    height:220px;      /* 🔥 đủ cao để không mất chữ */
+    height:600px;   /* bằng đúng chiều cao ảnh 1200x600 */
     padding:0;
-    overflow:hidden;
 }
 
-/* banner phủ full nhưng KHÔNG MÉO */
 .banner{
     width:100%;
     height:100%;
-    object-fit:contain;   /* 🔥 giữ trọn chữ */
     display:block;
-    background:#000;      /* nền đen cho đẹp nếu dư khoảng */
 }
 
-/* ===== B: MENU ===== */
+/* ===== MENU ===== */
 .menu{
     height:420px;
     background:#eee;
@@ -58,7 +52,7 @@ th, td{
     color:blue;
 }
 
-/* ===== C: CONTENT ===== */
+/* ===== CONTENT ===== */
 .content{
     height:420px;
     text-align:center;
@@ -71,7 +65,7 @@ th, td{
     margin-top:10px;
 }
 
-/* ===== D: FOOTER ===== */
+/* ===== FOOTER ===== */
 .footer{
     height:160px;
     background:#ddd;
@@ -84,21 +78,17 @@ th, td{
 
 <table>
 
-<!-- 🔥 CHIA 4 CỘT -->
 <colgroup>
     <col><col><col><col>
 </colgroup>
 
-<!-- ===== A: HEADER (4x1) ===== -->
 <tr>
     <th colspan="4" class="header">
         <img src="banner.jpg" class="banner">
     </th>
 </tr>
 
-<!-- ===== B + C ===== -->
 <tr>
-    <!-- B: 1 cột -->
     <td rowspan="2" class="menu">
         <b>Menu</b>
         <a href="page1.html" target="content">Trang 1</a>
@@ -108,7 +98,6 @@ th, td{
         <a href="page5.html" target="content">Trang 5</a>
     </td>
 
-    <!-- C: 3 cột -->
     <td colspan="3" rowspan="2" class="content">
         <h3>Nội dung hiển thị</h3>
         <iframe name="content"></iframe>
@@ -116,7 +105,6 @@ th, td{
 </tr>
 <tr></tr>
 
-<!-- ===== D: FOOTER (4x1) ===== -->
 <tr>
     <td colspan="4" class="footer">
         <b>Tiểu sử bản thân</b><br>
@@ -124,11 +112,7 @@ th, td{
         Ngành: Công Nghệ Thông Tin<br>
         MSSV: 110124242<br>
         Mã lớp: DA24TTC<br>
-        Email: hoangmy2006of@gmail.com<br>
-        Facebook:
-        <a href="https://www.facebook.com/share/1DaFiM2QZh/" target="_blank">
-            Xem tại đây
-        </a>
+        Email: hoangmy2006of@gmail.com
     </td>
 </tr>
 
