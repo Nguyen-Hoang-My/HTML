@@ -29,18 +29,17 @@ th, td{
     vertical-align:top;
 }
 
-/* ===== A: HEADER ===== */
 .header{
-    height:160px;      /* 🔥 A = D */
+    height:160px;
     padding:0;
+    overflow:hidden; /* 🔥 chống tràn */
 }
 
 .banner{
     width:100%;
-    height:160px;      /* 🔥 KHÓA CHIỀU CAO */
-    object-fit:contain;/* 🔥 KHÔNG mất chữ */
-    display:block;
-    background:#000;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
 }
 
 /* ===== B: MENU ===== */
