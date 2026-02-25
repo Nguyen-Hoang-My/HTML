@@ -11,17 +11,19 @@ body{
     padding:20px;
 }
 
-/* ===== TABLE KHÓA LƯỚI ===== */
+/* ===== TABLE ===== */
 table{
     width:1200px;
     margin:auto;
     border-collapse:collapse;
     background:white;
-    table-layout:fixed; /* 🔥 khóa layout */
+    table-layout:fixed;
 }
 
-/* chia 4 cột bằng nhau */
-col{ width:25%; }
+/* 4 cột bằng nhau */
+col{
+    width:25%;
+}
 
 th, td{
     border:2px solid #333;
@@ -29,17 +31,19 @@ th, td{
     vertical-align:top;
 }
 
+/* ===== A: HEADER ===== */
 .header{
-    height:160px;
+    height:200px;          /* 🔥 tăng cao để không mất chữ */
     padding:0;
-    overflow:hidden; /* 🔥 chống tràn */
+    overflow:hidden;
 }
 
 .banner{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:center;
+    object-fit:cover;      /* 🔥 phủ kín */
+    object-position:top center; /* 🔥 giữ phần chữ phía trên */
+    display:block;
 }
 
 /* ===== B: MENU ===== */
@@ -70,7 +74,7 @@ th, td{
 
 /* ===== D: FOOTER ===== */
 .footer{
-    height:160px;   /* 🔥 bằng A */
+    height:200px;   /* 🔥 bằng header */
     background:#ddd;
     line-height:1.6;
 }
@@ -81,12 +85,11 @@ th, td{
 
 <table>
 
-<!-- 🔥 CHIA 4 CỘT -->
 <colgroup>
     <col><col><col><col>
 </colgroup>
 
-<!-- ===== A: HEADER ===== -->
+<!-- ===== A ===== -->
 <tr>
     <th colspan="4" class="header">
         <img src="banner.jpg" class="banner" alt="Banner">
@@ -95,7 +98,6 @@ th, td{
 
 <!-- ===== B + C ===== -->
 <tr>
-    <!-- B: 1 cột -->
     <td rowspan="2" class="menu">
         <b>Menu</b>
         <a href="page1.html" target="content">Trang 1</a>
@@ -105,7 +107,6 @@ th, td{
         <a href="page5.html" target="content">Trang 5</a>
     </td>
 
-    <!-- C: 3 cột -->
     <td colspan="3" rowspan="2" class="content">
         <h3>Nội dung hiển thị</h3>
         <iframe name="content"></iframe>
@@ -113,7 +114,7 @@ th, td{
 </tr>
 <tr></tr>
 
-<!-- ===== D: FOOTER ===== -->
+<!-- ===== D ===== -->
 <tr>
     <td colspan="4" class="footer">
         <b>Tiểu sử bản thân</b><br>
