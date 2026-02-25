@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Menu đổi nội dung bằng iframe</title>
+<title>Menu dùng iframe</title>
 
 <style>
 .banner {
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     padding: 20px;
     background: #f5f5f5;
 }
@@ -31,8 +31,6 @@ th, td {
 
 .header {
     text-align: center;
-    font-size: 22px;
-    font-weight: bold;
     background: #ffb6c1;
 }
 
@@ -46,10 +44,6 @@ th, td {
     margin: 10px 0;
     text-decoration: none;
     color: blue;
-}
-
-.menu a:hover {
-    color: red;
 }
 
 .content {
@@ -76,40 +70,40 @@ th, td {
 
 <table>
 
-    <!-- HEADER -->
-    <tr>
-        <th colspan="2" class="header">
-            <img src="banner.jpg" alt="Banner" class="banner">
-        </th>
-    </tr>
+<!-- HEADER -->
+<tr>
+    <th colspan="2" class="header">
+        <img src="banner.jpg" alt="Banner" class="banner">
+    </th>
+</tr>
 
-    <!-- MENU + CONTENT -->
-    <tr>
+<!-- MENU + CONTENT -->
+<tr>
 
-        <!-- MENU -->
-        <td class="menu">
-            <b>Menu</b>
+    <!-- B: MENU -->
+    <td class="menu">
+        <b>Menu</b>
 
-            <a href="img1.jpg" target="content">Ảnh 1</a>
-            <a href="img2.jpg" target="content">Ảnh 2</a>
-            <a href="img3.jpg" target="content">Ảnh 3</a>
-        </td>
+        <a href="img1.jpg" target="content">Ảnh 1</a>
+        <a href="img2.jpg" target="content">Ảnh 2</a>
+        <a href="img3.jpg" target="content">Ảnh 3</a>
+    </td>
 
-        <!-- CONTENT -->
-        <td class="content">
-            <h3>Nội dung hiển thị</h3>
+    <!-- C: CONTENT -->
+    <td class="content">
+        <h3>Nội dung hiển thị</h3>
 
-            <iframe name="content"></iframe>
-        </td>
+        <iframe name="content"></iframe>
+    </td>
 
-    </tr>
+</tr>
 
-    <!-- FOOTER -->
-    <tr>
-        <td colspan="2" class="footer">
-            FOOTER
-        </td>
-    </tr>
+<!-- FOOTER -->
+<tr>
+    <td colspan="2" class="footer">
+        FOOTER
+    </td>
+</tr>
 
 </table>
 
