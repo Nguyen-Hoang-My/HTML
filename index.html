@@ -11,7 +11,7 @@ body{
     padding:20px;
 }
 
-/* ===== TABLE ===== */
+/* ===== TABLE KHÓA LƯỚI ===== */
 table{
     width:1200px;
     margin:auto;
@@ -20,10 +20,8 @@ table{
     table-layout:fixed;
 }
 
-/* 4 cột bằng nhau */
-col{
-    width:25%;
-}
+/* chia 4 cột bằng nhau */
+col{ width:25%; }
 
 th, td{
     border:2px solid #333;
@@ -33,22 +31,23 @@ th, td{
 
 /* ===== A: HEADER ===== */
 .header{
-    height:200px;          /* 🔥 tăng cao để không mất chữ */
+    height:220px;      /* 🔥 đủ cao để không mất chữ */
     padding:0;
     overflow:hidden;
 }
 
+/* banner phủ full nhưng KHÔNG MÉO */
 .banner{
     width:100%;
     height:100%;
-    object-fit:cover;      /* 🔥 phủ kín */
-    object-position:top center; /* 🔥 giữ phần chữ phía trên */
+    object-fit:contain;   /* 🔥 giữ trọn chữ */
     display:block;
+    background:#000;      /* nền đen cho đẹp nếu dư khoảng */
 }
 
 /* ===== B: MENU ===== */
 .menu{
-    height:400px;
+    height:420px;
     background:#eee;
 }
 
@@ -61,7 +60,7 @@ th, td{
 
 /* ===== C: CONTENT ===== */
 .content{
-    height:400px;
+    height:420px;
     text-align:center;
 }
 
@@ -74,7 +73,7 @@ th, td{
 
 /* ===== D: FOOTER ===== */
 .footer{
-    height:200px;   /* 🔥 bằng header */
+    height:160px;
     background:#ddd;
     line-height:1.6;
 }
@@ -85,19 +84,21 @@ th, td{
 
 <table>
 
+<!-- 🔥 CHIA 4 CỘT -->
 <colgroup>
     <col><col><col><col>
 </colgroup>
 
-<!-- ===== A ===== -->
+<!-- ===== A: HEADER (4x1) ===== -->
 <tr>
     <th colspan="4" class="header">
-        <img src="banner.jpg" class="banner" alt="Banner">
+        <img src="banner.jpg" class="banner">
     </th>
 </tr>
 
 <!-- ===== B + C ===== -->
 <tr>
+    <!-- B: 1 cột -->
     <td rowspan="2" class="menu">
         <b>Menu</b>
         <a href="page1.html" target="content">Trang 1</a>
@@ -107,6 +108,7 @@ th, td{
         <a href="page5.html" target="content">Trang 5</a>
     </td>
 
+    <!-- C: 3 cột -->
     <td colspan="3" rowspan="2" class="content">
         <h3>Nội dung hiển thị</h3>
         <iframe name="content"></iframe>
@@ -114,7 +116,7 @@ th, td{
 </tr>
 <tr></tr>
 
-<!-- ===== D ===== -->
+<!-- ===== D: FOOTER (4x1) ===== -->
 <tr>
     <td colspan="4" class="footer">
         <b>Tiểu sử bản thân</b><br>
