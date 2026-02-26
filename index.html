@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu dùng iframe</title>
-
 <style>
 body{
     font-family: Arial;
     background:#f5f5f5;
     padding:20px;
 } 
-
 table{
     width:1200px;
     margin:auto;
@@ -18,55 +16,45 @@ table{
     background:white;
     table-layout:fixed;
 }
-
 col{
     width:25%;
 }
-
 th, td{
     border:2px solid #333;
     padding:10px;
     vertical-align:top;
 }
-
-/* HEADER */
 .header{
     padding:0;
 }
 
 .header img{
     width:100%;
-    height:auto;   /* Không bị cắt */
+    height:160px;       
+    object-fit:cover;
+    object-position:top;   
     display:block;
 }
-
-/* MENU */
 .menu{
     height:420px;
     background:#eee;
 }
-
 .menu a{
     display:block;
     margin:8px 0;
     text-decoration:none;
     color:blue;
 }
-
-/* CONTENT */
 .content{
     height:420px;
     text-align:center;
 }
-
 .content iframe{
     width:100%;
     height:300px;
     border:none;
     margin-top:10px;
 }
-
-/* FOOTER */
 .footer{
     height:160px;
     background:#ddd;
@@ -74,7 +62,6 @@ th, td{
 }
 </style>
 </head>
-
 <body>
 <table>
 <colgroup>
@@ -83,13 +70,11 @@ th, td{
     <col>
     <col>
 </colgroup>
-
 <tr>
     <th colspan="4" class="header">
         <img src="banner1.png">
     </th>
 </tr>
-
 <tr>
     <td rowspan="2" class="menu">
         <b>Menu</b>
@@ -99,15 +84,12 @@ th, td{
         <a href="page4.html" target="content">Trang 4</a>
         <a href="page5.html" target="content">Trang 5</a>
     </td>
-
     <td colspan="3" rowspan="2" class="content">
         <h3>Nội dung hiển thị</h3>
         <iframe name="content"></iframe>
     </td>
 </tr>
-
 <tr></tr>
-
 <tr>
     <td colspan="4" class="footer">
         <b>Tiểu sử bản thân</b><br>
@@ -118,7 +100,6 @@ th, td{
         Email: hoangmy2006of@gmail.com
     </td>
 </tr>
-
 </table>
 </body>
-</html>
+</html> 
