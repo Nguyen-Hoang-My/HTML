@@ -7,60 +7,48 @@
 <style>
 body{
     font-family: Arial;
-    padding:10px;
+    padding: 10px;
 }
 
-.gallery{
-    text-align:center;
+h2{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .gallery-item{
-    margin-bottom:30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.gallery img{
-    width:100%;
-    max-width:500px;
-    height:auto;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+.gallery-item img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .caption{
-    margin-top:8px;
-    font-weight:bold;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+video{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 </style>
 
 </head>
 <body>
+<h3>Video hoạt động phiên chợ Xuân</h3>
 
-<h2>Các gian hàng Tết tại TVU</h2>
-
-<div class="gallery">
-
-    <div class="gallery-item">
-        <img src="tet1.jpg">
-        <div class="caption">
-            Phiên chợ Xuân với nhiều sản phẩm truyền thống.
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="tet2.jpg">
-        <div class="caption">
-            Gian hàng mứt 1 và đặc sản ngày Tết tại Đại học Trà Vinh.
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="tet3.jpg">
-        <div class="caption">
-            Gian hàng mứt 2 và đặc sản ngày Tết tại Đại học Trà Vinh.
-        </div>
-    </div>
-
-</div>
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    Trình duyệt không hỗ trợ video.
+</video>
 
 </body>
 </html>
