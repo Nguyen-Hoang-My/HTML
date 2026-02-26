@@ -3,11 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <title>Trang 1</title>
+
+<style>
+body{
+    font-family: Arial;
+    padding:10px;
+}
+
+.gallery{
+    text-align:center;
+}
+
+.gallery-item{
+    margin-bottom:30px;
+}
+
+.gallery img{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.caption{
+    margin-top:8px;
+    font-weight:bold;
+}
+</style>
+
 </head>
 <body>
 
-<h2>Đây là trang 1</h2>
-<p>Nội dung trang 1 hiển thị trong iframe.</p>
+<h2>Các gian hàng Tết tại TVU</h2>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="tet1.jpg">
+        <div class="caption">
+            Gian hàng mứt và đặc sản ngày Tết tại Đại học Trà Vinh.
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="tet2.jpg">
+        <div class="caption">
+            Phiên chợ Xuân với nhiều sản phẩm truyền thống.
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="tet3.jpg">
+        <div class="caption">
+            Khu trưng bày thư pháp chào Xuân.
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
