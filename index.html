@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Website của tôi</title>
+<meta charset="UTF-8">
+<title>Menu dùng iframe</title>
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+    padding:20px;
+} 
+table{
+    width:1200px;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    table-layout:fixed;
+}
+col{
+    width:25%;
+}
+th, td{
+    border:2px solid #333;
+    padding:10px;
+    vertical-align:top;
+}
+.header{
+    padding:0;
+}
 
-    <style>
-        body{
-            font-family: Arial;
-            background:#f5f5f5;
-        }
-
-        table{
-            width:1200px;
-            margin:auto;
-            border-collapse:collapse;
-            background:white;
-        }
-
-        td{
-            padding:10px;
-        }
-
-        .menu a{
-            text-decoration:none;
-            padding:10px 20px;
-            background:#3498db;
-            color:white;
-            border-radius:5px;
-            margin-right:10px;
-        }
-
-        .menu a:hover{
-            background:#2c3e50;
-        }
-
-        iframe{
-            width:100%;
-            height:600px;
-            border:none;
-        }
-    </style>
+.header img{
+    width:100%;
+    height:160px;       
+    object-fit:cover;
+    object-position:top;   
+    display:block;
+}
+.menu{
+    height:420px;
+    background:#eee;
+}
+.menu a{
+    display:block;
+    margin:8px 0;
+    text-decoration:none;
+    color:blue;
+}
+.content{
+    height:420px;
+    text-align:center;
+}
+.content iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    margin-top:10px;
+}
+.footer{
+    height:160px;
+    background:#ddd;
+    line-height:1.6;
+}
+</style>
 </head>
-
 <body>
-
-<table border="1">
-    <!-- Banner -->
-    <tr>
-        <td colspan="2">
-            <img src="banner1.png" width="100%">
-        </td>
-    </tr>
-
-    <!-- Menu -->
-    <tr>
-        <td colspan="2" class="menu">
-            <a href="page1.html" target="noidung">Trang 1</a>
-            <a href="page2.html" target="noidung">Trang 2</a>
-            <a href="page3.html" target="noidung">Trang 3</a>
-            <a href="page4.html" target="noidung">Trang 4</a>
-            <a href="page5.html" target="noidung">Trang 5</a>
-        </td>
-    </tr>
-
-    <!-- Nội dung -->
-    <tr>
-        <td colspan="2">
-            <iframe name="noidung" src="page1.html"></iframe>
-        </td>
-    </tr>
-
+<table>
+<colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+</colgroup>
+<tr>
+    <th colspan="4" class="header">
+        <img src="banner1.png">
+    </th>
+</tr>
+<tr>
+    <td rowspan="2" class="menu">
+        <b>Menu</b>
+        <a href="page1.html" target="content">Trang 1</a>
+        <a href="page2.html" target="content">Trang 2</a>
+        <a href="page3.html" target="content">Trang 3</a>
+        <a href="page4.html" target="content">Trang 4</a>
+        <a href="page5.html" target="content">Trang 5</a>
+    </td>
+    <td colspan="3" rowspan="2" class="content">
+        <h3>Nội dung hiển thị</h3>
+        <iframe name="content"></iframe>
+    </td>
+</tr>
+<tr></tr>
+<tr>
+    <td colspan="4" class="footer">
+        <b>Tiểu sử bản thân</b><br>
+        Họ tên: Nguyễn Hoàng Mỹ<br>
+        Ngành: Công Nghệ Thông Tin<br>
+        MSSV: 110124242<br>
+        Mã lớp: DA24TTC<br>
+        Email: hoangmy2006of@gmail.com
+    </td>
+</tr>
 </table>
-
 </body>
-</html>
+</html>                                                                                            
