@@ -6,53 +6,69 @@
 
 <style>
 body{
-    font-family: Arial;
-    padding: 10px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f5f5f5;
 }
 
+/* Tiêu đề chính */
 h2{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* Khung ảnh */
 .gallery-item{
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
+/* Ảnh */
 .gallery-item img{
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* Chú thích ảnh */
 .caption{
-    margin-top: 8px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
+/* Tiêu đề video */
+.video-title{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Video */
 video{
     display: block;
     width: 100%;
     max-width: 600px;
-    margin: 20px auto;
-    border-radius: 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 </style>
 
 </head>
+
 <body>
-    <h2>Phiên chợ xuân tại Đại học Trà Vinh</h2>
+
+<h2>Phiên chợ xuân tại Đại học Trà Vinh</h2>
 
 <div class="gallery-item">
-    <img src="tet1.jpg">
+    <img src="tet1.jpg" alt="Phiên chợ xuân">
     <div class="caption">
        Các gian hàng mứt và đặc sản ngày Tết.
     </div>
 </div>
-<h3>Video hoạt động phiên chợ Xuân</h3>
+
+<h3 class="video-title">Video hoạt động phiên chợ Xuân</h3>
 
 <video controls>
     <source src="video.mp4" type="video/mp4">
